@@ -16,10 +16,9 @@ interface Data {
         image: string;
         image_url: string;
         name: string;
+        location: string;
         email: string;
         whatsapp: string;
-        city: string;
-        uf: string;
     };
     items:{
         title: string;
@@ -61,7 +60,7 @@ const Detail = () => {
         <SafeAreaView style={{ flex: 1 }}>
             <View style={styles.container}>
                 <TouchableOpacity onPress={handleNavigateBack}>
-                    <Icon name="arrow-left" size={28} color="#34cb79" />
+                    <Icon name="arrow-left" size={28} color="#154E93" />
                 </TouchableOpacity>
 
                 <Image style={styles.pointImage} source={{ uri: data.point.image_url}}/>
@@ -72,8 +71,8 @@ const Detail = () => {
                 </Text>
 
                 <View style={styles.address}>
-                    <Text style={styles.addressTitle}>Endereço</Text>
-                    <Text style={styles.addressContent}>{data.point.city}, {data.point.uf}</Text>
+                    <Text style={styles.addressTitle}>Local</Text>
+                    <Text style={styles.addressContent}>{data.point.location}</Text>
                 </View>
             </View>
 
@@ -152,7 +151,7 @@ const styles = StyleSheet.create({
     
     button: {
       width: '48%',
-      backgroundColor: '#34CB79',
+      backgroundColor: '#154E93',
       borderRadius: 10,
       height: 50,
       flexDirection: 'row',

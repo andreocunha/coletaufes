@@ -27,6 +27,7 @@ const CreatePoint = () =>{
     const [formData, setFormData] = useState({
         name: '',
         email: '',
+        location: '',
         whatsapp: '',
     })
 
@@ -37,11 +38,7 @@ const CreatePoint = () =>{
     const history = useHistory();
 
     useEffect(() => {
-        navigator.geolocation.getCurrentPosition(position => {
-            const { latitude, longitude } = position.coords;
-
-            setInitialPosition([latitude, longitude]);
-        })
+        setInitialPosition([-20.2769499, -40.3068654]);
     }, []);
 
     useEffect(() => {
@@ -78,7 +75,7 @@ const CreatePoint = () =>{
     async function handleSubmit(event: FormEvent){
         event.preventDefault();
 
-        const { name, email, whatsapp } = formData;
+        const { name, email, location, whatsapp } = formData;
         const [latitude, longitude] = selectedPosition;
         const items = selectedItems;
 
@@ -86,6 +83,7 @@ const CreatePoint = () =>{
 
         data.append('name', name);
         data.append('email', email);
+        data.append('location', location);
         data.append('whatsapp', whatsapp);
         data.append('latitude', String(latitude));
         data.append('longitude', String(longitude));
@@ -134,7 +132,7 @@ const CreatePoint = () =>{
                     </div>
 
                     <div className="field">
-                        <label htmlFor="name">Descrição do local</label>
+                        <label htmlFor="location">Descrição do local</label>
                         <input 
                             type="text"
                             name="location"

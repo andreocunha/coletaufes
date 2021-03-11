@@ -5,16 +5,11 @@ import { RectButton } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 
 const Home = () => {
-    const [uf, setUf] = useState('');
-    const [city, setCity] = useState('');
 
     const navigation = useNavigation();
 
     function handleNavigateToPoints(){
-        navigation.navigate('Points', {
-            uf,
-            city,
-        })
+        navigation.navigate('Points');
     }
     return( 
         <KeyboardAvoidingView style={{ flex: 1}} behavior={Platform.OS === 'ios' ? 'padding': undefined}>
@@ -26,31 +21,12 @@ const Home = () => {
             <View style={styles.main}>
                     <Image source={require('../../assets/logo.png')}/> 
                     <View>
-                        <Text style={styles.title}>Seu marketplace de coleta de resíduos</Text>
-                        <Text style={styles.description}>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</Text>
+                        <Text style={styles.title}>Seu local de coleta de resíduos</Text>
+                        <Text style={styles.description}>Ajudamos as pessoas a descartarem seus resíduos de forma eficiente.</Text>
                     </View>
             </View>
 
             <View style={styles.footer}>
-                    <TextInput 
-                        style={styles.input}
-                        placeholder="Digite a UF"
-                        value={uf}
-                        maxLength={2}
-                        autoCapitalize="characters"
-                        autoCorrect={false}
-                        onChangeText = {setUf}
-                    />
-
-                    <TextInput 
-                        style={styles.input}
-                        placeholder="Digite a cidade"
-                        value={city}
-                        autoCorrect={false}
-                        onChangeText = {setCity}
-                    />
-
-
                     <RectButton style={styles.button} onPress={handleNavigateToPoints}>
                         <View style={styles.buttonIcon}>
                             <Text>
@@ -109,7 +85,7 @@ const styles = StyleSheet.create({
     },
   
     button: {
-      backgroundColor: '#34CB79',
+      backgroundColor: '#154E93',
       height: 60,
       flexDirection: 'row',
       borderRadius: 10,

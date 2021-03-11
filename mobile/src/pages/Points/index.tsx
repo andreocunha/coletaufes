@@ -35,27 +35,10 @@ const Points = () => {
     const [initialPosition, setInitialPosition] = useState<[number, number]>([0, 0])
 
     const navigation = useNavigation();
-    const route = useRoute();
-
-    const routeParams = route.params as Params;
 
     useEffect(() => {
         async function loadPosition(){
-            const { status } = await Location.requestPermissionsAsync();
-
-            if(status !== 'granted'){
-                Alert.alert('Oooops...', 'Precisamos de sua permissão para obter a localização');
-                return;
-            }
-
-            const location = await Location.getCurrentPositionAsync();
-
-            const { latitude, longitude } = location.coords;
-
-            setInitialPosition([
-                latitude,
-                longitude
-            ])
+            setInitialPosition([-20.2769499, -40.3068654])
         }
         loadPosition();
     },[])
@@ -69,8 +52,6 @@ const Points = () => {
     useEffect(() => {
         api.get('points', {
             params:{
-                city: routeParams.city,
-                uf: routeParams.uf,
                 items: selectedItems
             }
         }).then(response => {
@@ -102,7 +83,7 @@ const Points = () => {
         <>
             <View style={styles.container}>
                 <TouchableOpacity onPress={handleNavigateBack}>
-                    <Icon name="arrow-left" size={28} color="#34cb79" />
+                    <Icon name="arrow-left" size={28} color="#154E93" />
                 </TouchableOpacity>
 
                 <Text style={styles.title}>Bem vindo.</Text>
@@ -209,7 +190,7 @@ const styles = StyleSheet.create({
     mapMarkerContainer: {
       width: 90,
       height: 70,
-      backgroundColor: '#34CB79',
+      backgroundColor: '#154E93',
       flexDirection: 'column',
       borderRadius: 8,
       overflow: 'hidden',
