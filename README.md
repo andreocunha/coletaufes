@@ -27,8 +27,8 @@ do seu lixo. O projeto surgiu para a disciplina de Computação e Sociedade da U
 O objetivo é conectar pessoas a empresas que coletam resíduos específicos, como lâmpadas, baterias, óleo de cozinha etc, facilitando a coleta e ajudando o meio ambiente.
 
 <h1 align="center">
-    <img alt="Example" title="Example" src=".github/web.svg" width="500px" />
-    <img alt="Example" title="Example" src=".github/mobile.svg" width="300px" />
+    <img alt="Web" title="Web" src=".github/web.svg" width="500px" />
+    <img alt="Mobile" title="Mobile" src=".github/mobile.svg" width="100px" />
 </h1>
 
 
