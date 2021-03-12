@@ -12,7 +12,6 @@
   <a href="#rocket-Tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#information_source-como-usar">Como usar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-projetos-finais-(mobile-e-web)">Projetos finais (Mobile e Web)</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
 ## :information_source: O que é o ColetaUFES?
@@ -27,8 +26,7 @@ do seu lixo. O projeto surgiu para a disciplina de Computação e Sociedade da U
 O objetivo é conectar pessoas a empresas que coletam resíduos específicos, como lâmpadas, baterias, óleo de cozinha etc, facilitando a coleta e ajudando o meio ambiente.
 
 <h1 align="center">
-    <img alt="Web" title="Web" src=".github/web.svg" width="500px" />
-    <img alt="Mobile" title="Mobile" src=".github/mobile.svg" width="100px" />
+    <img alt="coleta" title="coleta" src=".github/coleta.png" width="700px" />
 </h1>
 
 
@@ -119,11 +117,6 @@ $ yarn start
 
 ```
 
-<!-- ### Projetos finais (Mobile e Web) -->
-
-<!-- <h1 align="center">
-    <img alt="coleta" title="#coleta" src=".github/coleta.png" width="700px" />
-</h1> -->
 
 Feito com ♥ por André Oliveira Cunha :wave: [Linkedin](https://www.linkedin.com/in/andr%C3%A9-oliveira-cunha-b26b3a156/)
 
