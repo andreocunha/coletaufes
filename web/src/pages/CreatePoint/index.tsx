@@ -93,9 +93,17 @@ const CreatePoint = () =>{
             data.append('image', selectedFile);
         }
 
-        await api.post('points', data);
-        alert('Ponto de coleta criado!');
-        history.push('/');
+        console.log(data)
+
+        try{
+            await api.post('points', data);
+            // alert('Ponto de coleta criado!');
+            history.push('/success');
+        }catch(err){
+            alert('Deu ruim')
+            console.log(err)
+        }
+        
     }
 
     return(
@@ -122,7 +130,7 @@ const CreatePoint = () =>{
                     </legend>
 
                     <div className="field">
-                        <label htmlFor="name">Nome da entidade</label>
+                        <label htmlFor="name">Nome do ponto de coleta</label>
                         <input 
                             type="text"
                             name="name"

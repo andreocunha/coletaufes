@@ -1,0 +1,13 @@
+#page-success {
+  height: 100vh;
+  background: #0E0A14;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#page-success .content {
+  align-self: center;
+}
+
+  
